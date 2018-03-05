@@ -1,54 +1,109 @@
 ﻿<!DOCTYPE html>
 <html>
+
+
+  <style>
+   a.rollover {
+    background: url(images/sh-st.png); /* Путь к файлу с исходным  рисунком */
+    display: block; /* Рисунок как блочный элемент */
+    width: 700px; /* Ширина рисунка в пикселах */
+    height: 502px; /* Высота рисунка */
+   }
+   a.rollover:hover {
+    background-position: 0 -502px; /* Смещение фона */
+   }
+  </style>
+
+
+
+
+
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>RSite</title>
 <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <style type="text/css">
+<!-- <style type="text/css">
    #layer1 {
-    // width: 300px;/* Ширина слоя */
+     width: 300px;/* Ширина слоя */
     background: #fff; /* Цвет фона */
     height: 70px; /* Высота слоя */
     padding: 5px; /* Поля вокруг текста */
-   }
+   }  -->
  
 
- .layer1 {
-    font: 12pt sans-serif;  
-   } 
-   h1 {
-    font: 20pt sans-serif;
-   }
+
  </style>
 
 </head>
 
 
 <body> 
-<div id="layer1">
-<table border="0" bgcolor=#fff>
-
+  <table border="0" bgcolor=#fff cellpadding="3" height="0" width="700" rules="cols" >
    <tr>
-    <th>Петров Олег Максимович</th>
-    <th>Электронная почта</th>
-    <th>Телефон</th>
+    <td align="center"><p><b><font color="red" >П</font>етров <font color="red" >М</font>аксим <font color="red" >О</font>легович</b></td>
+    <td align="center">Электронная почта</td>
+    <td align="center">Телефон</td>
    </tr>
-   <tr><td>Репетитор по Математичке</td><td>max@mail.ru</td><td>8-916-123-45-67</td></tr>
+   <tr><td align="center">Репетитор по математике</td>
+   	<td align="center"><b>max@mail.ru</b></td>
+   	<td align="center"><b>8-916-123-45-67</b></td></tr>
   </table>
-<h1>Петров Максим Олегович | Репетитор по математике ЕГЭ/ОГЭ</h1>
-<h1>8-916-123-45-67 | max@mail.ru</h1>
-<hr>
+
 <p>Строка1</p>
 <p>Строка2</p>
 
-<blockquote>
-	Предназначен для выделения длинных цитат внутри документа. Текст, обозначенный этим тегом, традиционно отображается как выровненный блок с отступами слева и справа (примерно по 40 пикселов), а также с пустым пространством сверху и снизу.
-</blockquote>	
+ <p><a href="images/rep_photo.jpg">Кликнешь и откроется фото</a></p>
 
-<p>git 2</p>
-<p>новое изменение</p>
+<p><a href="http://www.coau.ru" class="rollover"></a></p>
+
+
+
+
+/*       Контактная форма          */
+<form action="#">
+
+
+  <p><i>Пожалуйста, заполните форму. Обязательные поля помечены </i><em>*</em></p>
+  <fieldset>
+    <legend>Контактная информация</legend>
+      <label for="name">Имя <em>*</em></label>
+      <input id="name"><br>
+      <label for="telephone">Телефон</label>
+      <input id="telephone"><br>
+      <label for="email">Email <em>*</em></label>
+      <input id="email"><br>
+  </fieldset>
+  <fieldset>
+    <legend>Персональная информация</legend>
+      <label for="age">Возраст<em>*</em></label>
+      <input id="age"><br>
+      <label for="gender">Пол</label>
+      <select id="gender">
+        <option value="female">Женщина</option>
+        <option value="male">Мужчина</option>
+      </select><br>
+      <label for="comments">Перечислите личные качества</label>
+      <textarea id="comments"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Выберите ваших любимых животных</legend>
+    <label for="zebra"><input id="zebra" type="checkbox"> Зебра</label>
+    <label for="cat"><input id="cat" type="checkbox"> Кошак</label>
+    <label for="anaconda"><input id="anaconda" type="checkbox"> Анаконда</label>
+    <label for="human"><input id="human" type="checkbox"> Человек</label>
+    <label for="elephant"><input id="elephant" type="checkbox"> Слон</label>
+    <label for="wildebeest"><input id="wildebeest" type="checkbox"> Антилопа</label>
+    <label for="pigeon"><input id="pigeon" type="checkbox"> Голубь</label>
+    <label for="crab"><input id="crab" type="checkbox"> Краб</label>
+  </fieldset>
+  <p><input type="submit" value="Отправить информацию"></p>
+</form>
+
+
+
 
 
 
